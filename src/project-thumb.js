@@ -28,7 +28,7 @@ showThumbnailButton.addEventListener("click", async () => {
             projectAuthor.textContent = "Loading author...";
             
             const targetUrl = `https://api.scratch.mit.edu/projects/${id}`;
-            const response = await fetch(corsfixProxy(targetUrl));
+            const response = await fetch(corsfixProxy(targetUrl), { "method": "GET" });
             
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
