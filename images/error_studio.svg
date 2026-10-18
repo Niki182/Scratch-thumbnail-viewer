@@ -1,0 +1,24 @@
+<svg width="480.00000000000006" height="360" xmlns="http://www.w3.org/2000/svg" stroke="null">
+ <g id="Layer_1" stroke="null">
+  <title stroke="null">Layer 1</title>
+  <path fill="#000000" stroke="#000" stroke-width="0" opacity="undefined" d="m-6.66667,-3.06666l500.66666,0l0,382.66666l-500.66666,0l0,-382.66666z" id="svg_23"/>
+  <rect fill="url(#svg_14)" stroke-width="0" x="-4.87724" y="39.6" width="487.74615" height="90.66667" id="svg_11" stroke="#000"/>
+  <path fill="#5B9BA2" opacity="NaN" d="m71.33333,97.46666" id="svg_3" stroke="#000"/>
+  <text fill="#ffffff" stroke-width="0" x="94.38068" y="41.05528" id="svg_8" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(1.8262 0 0 2.1025 12.6588 15.6799)" filter="url(#svg_8_blur)">Error</text>
+  <text style="cursor: move;" fill="#ffffff" stroke-width="0" x="17.20225" y="175.6" id="svg_9" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(0.756768 0 0 0.879025 59.4961 7.2609)" filter="url(#svg_8_blur)">The studio ID you entered is empty or invalid,</text>
+  <rect fill="#ffffff" stroke="#000" stroke-width="0" opacity="NaN" x="-20" y="-3.06666" width="6" height="0.66667" id="svg_21"/>
+  <rect fill="#ffffff" stroke-width="0" x="-14" y="-3.06666" height="0.66667" id="svg_22" stroke="#000"/>
+  <path fill="#fff600" stroke="#000" stroke-width="0" d="m186.92498,311.23348l50.66667,-103.99998l50.66667,103.99998l-101.33334,0z" id="svg_27"/>
+  <text fill="#020202" stroke-width="0" x="160.03853" y="256.97729" id="svg_31" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(4.55577 0 0 3.10561 -508.642 -501.091)">!</text>
+  <text fill="#ffffff" stroke-width="0" x="157.2716" y="174.46238" id="svg_1" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(0.756768 0 0 0.879025 3.49606 35.2609)" filter="url(#svg_8_blur)">please enter a proper studio ID</text>
+ </g>
+ <defs>
+  <filter id="svg_8_blur">
+   <feGaussianBlur in="SourceGraphic" stdDeviation="0"/>
+  </filter>
+  <linearGradient id="svg_14" x1="0" y1="1" x2="0" y2="0">
+   <stop stop-color="#595959" stop-opacity="0.98438" offset="0"/>
+   <stop stop-color="#cecece" stop-opacity="0.99219" offset="1"/>
+  </linearGradient>
+ </defs>
+</svg>
