@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Thumbnail Viewer - Studios</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar-top">
+      <ul class="nav-links" style="height: 15px;">
+        <li class="logo"><a href="index.html" class="logo">Scratch Thumbnail Viewer</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="project-thumbnail.html">Project thumbnail</a></li>
+        <li><a href="studio-thumbnail.html">Studio thumbnail</a></li>
+      </ul>
+    </nav>
+    <br>
+    <div class="web-body">
+        <div>
+            <h4>Studio ID: <input type="text" value="116213" id="studio-id" aria-label="Scratch studio ID"></h4>
+            <button id="show-thumbnail" type="button">Show thumbnail</button>
+        </div>
+        <p>
+            All studio images are dynamically generated and hosted by
+            <a href="https://scratch.mit.edu/" target="_blank" rel="noreferrer">Scratch</a>
+            under a
+            <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 2.0 license</a>.
+        </p>
+        <hr>
+        <p>
+            Enable original image size:
+            <input type="checkbox" value="false" id="original-size-toggle">
+        </p>
+        <img src="https://uploads.scratch.mit.edu/get_image/gallery/116213_204x120.png" id="studio-img" alt="Scratch studio thumbnail" width="204" height="120">
+        <h3>
+            Studio link:
+            <a href="https://scratch.mit.edu/studios/116213/" target="_blank" rel="noreferrer" id="studio-link">
+                https://scratch.mit.edu/studios/<span id="studio-id-display">116213</span>/
+            </a>
+        </h3>
+    </div>
+    <script src="src/studio-thumb.js" defer></script>
+</body>
+</html>

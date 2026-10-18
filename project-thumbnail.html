@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Thumbnail Viewer - Projects</title>
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar-top">
+      <ul class="nav-links" style="height: 15px;">
+        <li class="logo"><a href="index.html" class="logo">Scratch Thumbnail Viewer</a></li>
+      </ul>
+    </nav>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="project-thumbnail.html">Project thumbnail</a></li>
+        <li><a href="studio-thumbnail.html">Studio thumbnail</a></li>
+      </ul>
+    </nav>
+    <br>
+    <div class="web-body">
+        <div>
+            <h4>Project ID: <input type="text" value="1376186332" id="project-id" aria-label="Scratch project ID"></h4>
+            <button id="show-thumbnail" type="button">Show thumbnail</button>
+        </div>
+        <p>
+            All project images are dynamically generated and hosted by
+            <a href="https://scratch.mit.edu/" target="_blank" rel="noreferrer">Scratch</a>
+            under a
+            <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 2.0 license</a>.
+        </p>
+        <hr>
+        <p style="margin-top: 10px;">
+            Enable original image size:
+            <input type="checkbox" value="false" id="original-size-toggle">
+        </p>
+        <p id="project-author">Project made by: <a href="https://scratch.mit.edu/users/Black_Cat_Animation0/" target="_blank" rel="noreferrer"><img src="https://cdn2.scratch.mit.edu/get_image/user/175209533_90x90.png" width="30" height="30" style="vertical-align: middle;"> Black_Cat_Animation0</a></p>
+        <img src="https://uploads.scratch.mit.edu/get_image/project/1376186332_480x360.png" id="project-img" alt="Scratch project thumbnail" width="480" height="360">
+        <h3>
+            Project link:
+            <a href="https://scratch.mit.edu/projects/1376186332/" target="_blank" rel="noreferrer" id="project-link">
+                https://scratch.mit.edu/projects/<span id="project-id-display">1376186332</span>/
+            </a>
+        </h3>
+    </div>
+    <script src="src/project-thumb.js" defer></script>
+</body>
+</html>
