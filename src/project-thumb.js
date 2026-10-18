@@ -40,7 +40,7 @@ showThumbnailButton.addEventListener("click", async () => {
             let avatarUrl = "";
             try {
                 const userTargetUrl = `https://api.scratch.mit.edu/users/${username}`;
-                const userResponse = await fetch(corsfixProxy(userTargetUrl));
+                const userResponse = await fetch(corsfixProxy(userTargetUrl), { "method": "GET" });
                 if (userResponse.ok) {
                     const userData = await userResponse.json();
                     avatarUrl = userData.profile.images['90x90'];
