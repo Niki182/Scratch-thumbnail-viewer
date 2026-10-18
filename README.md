@@ -9,4 +9,4 @@ This website also uses `api.scratch.mit.edu` to fetch the name and the profile p
 `https://realfavicongenerator.net` - I used it to make the favicon
 [https://realfavicongenerator.net/logo-maker](https://realfavicongenerator.net/logo-maker)
 
-The images from `uploads.scratch.mit.edu` are CC BY-SA 2.0; the same goes for `api.scratch.mit.edu`.
+The images from `uploads.scratch.mit.edu` are [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/); the same goes for `api.scratch.mit.edu`.
