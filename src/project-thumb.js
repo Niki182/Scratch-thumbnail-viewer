@@ -4,6 +4,7 @@ const thumbnail = document.getElementById("project-img");
 const projectLink = document.getElementById("project-link");
 const projectAuthor = document.getElementById("project-author");
 const originalSizeToggle = document.getElementById("original-size-toggle");
+const corsfixProxy = (url) => `https://proxy.corsfix.com/?${url}`;
 
 showThumbnailButton.addEventListener("click", async () => {
     const id = projectID.value.trim();
@@ -27,7 +28,7 @@ showThumbnailButton.addEventListener("click", async () => {
             projectAuthor.textContent = "Loading author...";
             
             const targetUrl = `https://api.scratch.mit.edu/projects/${id}`;
-            const response = await fetch(`https://proxy.corsfix.com/?${targetUrl}`);
+            const response = await fetch(corsfixProxy(targetUrl));
             
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
@@ -39,7 +40,7 @@ showThumbnailButton.addEventListener("click", async () => {
             let avatarUrl = "";
             try {
                 const userTargetUrl = `https://api.scratch.mit.edu/users/${username}`;
-                const userResponse = await fetch(`https://proxy.corsfix.com/?${userTargetUrl}`);
+                const userResponse = await fetch(corsfixProxy(userTargetUrl));
                 if (userResponse.ok) {
                     const userData = await userResponse.json();
                     avatarUrl = userData.profile.images['90x90'];
