@@ -4,7 +4,9 @@ const thumbnail = document.getElementById("project-img");
 const projectLink = document.getElementById("project-link");
 const projectAuthor = document.getElementById("project-author");
 const originalSizeToggle = document.getElementById("original-size-toggle");
-const corsfixProxy = (url) => `https://proxy.corsfix.com/?${url}`;
+
+// Using your native Cloudflare Pages Function proxy
+const corsfixProxy = (url) => `functions/proxy?url=${encodeURIComponent(url)}`;
 
 showThumbnailButton.addEventListener("click", async () => {
     const id = projectID.value.trim();
@@ -17,16 +19,16 @@ showThumbnailButton.addEventListener("click", async () => {
         return;
     }
 
-    updateThumbnailSize()
+    updateThumbnailSize();
     thumbnail.src = `https://uploads.scratch.mit.edu/get_image/project/${id}_480x360.png`;
     projectLink.href = `https://scratch.mit.edu/projects/${id}/`;
     projectLink.textContent = projectLink.href;
 
-    // Huge thanks to google gemini for the help :D (Please don't get angry at me for using a proxy, I just want to make this work)
     if (projectAuthor) {
         try {
             projectAuthor.textContent = "Loading author...";
             
+            // Fetch project metadata via Cloudflare Function
             const targetUrl = `https://api.scratch.mit.edu/projects/${id}`;
             const response = await fetch(corsfixProxy(targetUrl), { "method": "GET" });
             
@@ -34,9 +36,11 @@ showThumbnailButton.addEventListener("click", async () => {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             
+            // Direct JSON parsing since your Cloudflare worker returns the raw response text
             const data = await response.json();
             const username = data.author.username;
             
+            // Fetch author avatar via Cloudflare Function
             let avatarUrl = "";
             try {
                 const userTargetUrl = `https://api.scratch.mit.edu/users/${username}`;
@@ -60,19 +64,18 @@ showThumbnailButton.addEventListener("click", async () => {
     }
 });
 
-
 function updateThumbnailSize() {
-	if (originalSizeToggle.checked) {
-		thumbnail.style.height = "auto";
-		thumbnail.style.width = "auto";
-	} else {
-		thumbnail.style.height = "";
-		thumbnail.style.width = "";
-		thumbnail.width = 480;
-		thumbnail.height = 360;
-	}
+    if (originalSizeToggle.checked) {
+        thumbnail.style.height = "auto";
+        thumbnail.style.width = "auto";
+    } else {
+        thumbnail.style.height = "";
+        thumbnail.style.width = "";
+        thumbnail.width = 480;
+        thumbnail.height = 360;
+    }
 };
 
 originalSizeToggle.addEventListener("change", () => {
-	updateThumbnailSize();
+    updateThumbnailSize();
 });
